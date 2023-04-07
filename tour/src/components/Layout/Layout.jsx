@@ -1,11 +1,15 @@
-import React from 'react'
+import React from 'react';
+
+import Header from '../Header/Header';
+import Routers from '../../router/Router';
+import Footer from '../Footer/Footer';
 
 const Layout = () => {
-  return (
-    <div>
-      Layout
-    </div>
-  )
+  return <>
+  <Header/>
+  <Routers/>
+  <Footer/>
+  </>
 }
 
 export default Layout;
