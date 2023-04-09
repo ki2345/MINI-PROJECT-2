@@ -3,11 +3,11 @@ import galleryImages from './galleryImages';
 import Masonry, { ResponsiveMasonry} from 'react-responsive-masonry';
 const MasonryImagesGallery = () => {
   return (
-    <ResponsiveMasonry columnsCountBreakpoints = {{350:1, 768:3, 992:4}}>
-      <Masonry>
+    <ResponsiveMasonry columnsCountBreakPoints = {{350:1, 768:3, 992:4}}>
+      <Masonry gutter='1rem'>
            {
                 galleryImages.map((item,index) => {
-                    <img className='masonry_img'
+                    <img className="masonry_img"
                     src={item} 
                     key={index} 
                     alt="" 
