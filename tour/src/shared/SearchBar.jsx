@@ -12,7 +12,7 @@ const SearchBar = () => {
         const distance=DistanceRef.current.value;
         const maxGroupSize=maxGroupSizeRef.current.value;
 
-        if(location=='' || distance=='' || maxGroupSize=='')
+        if(location==='' || distance==='' || maxGroupSize==='')
         {
             return alert("All fields are required!");
         }
