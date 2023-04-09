@@ -12,6 +12,7 @@ import ServiceList from "../services/ServiceList";
 import FeaturedTourList from "../components/Featured-Tours/FeaturedTourList";
 import MasonryImagesGallery from "../components/Image-gallery/MasonryImagesGallery";
 import Testimonials from "../components/Testimonial/Testimonials";
+import Newsletter from "../shared/Newsletter";
 
 const Home = () => {
   return (
@@ -154,6 +155,7 @@ const Home = () => {
         </container>
       </section>
       {/* testimonial section end */}
+      <Newsletter/>
     </div>
   );
 };
