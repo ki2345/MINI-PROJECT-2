@@ -10,7 +10,7 @@ const MasonryImagesGallery = () => {
                     <img className="masonry_img"
                     src={item} 
                     key={index} 
-                    alt="" 
+                    alt="photo" 
                     style={{'width' : '100%', 'display' : 'block', 'borderRadius' : '10px'}}/>
                 })
            }
