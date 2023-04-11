@@ -1,6 +1,6 @@
 import React from 'react'
 import TourCard from '../../shared/TourCard'
-import TourData from '../../assets/data/tour'
+import TourData from '../../assets/Data/tour'
 import {Col} from 'reactstrap'
 const FeaturedTourList = () => {
   return (

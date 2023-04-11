@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/tour-details.css";
 import { Container, Row, Col, Form, ListGroup } from "reactstrap";
 import { useParams } from "react-router-dom";
-import tourData from "../assets/data/tour";
+import tourData from "../assets/Data/tour";
 
 
 const TourDetails = () => {
