@@ -36,8 +36,11 @@ const TourDetails = () => {
   //submit request to the server
   const submitHandler=e=>{
     e.preventDefault()
-    const reviewText = reviewMsgRef.current.value ;
+    const reviewText = reviewMsgRef.current.value;
+    
+
     //later will call our api
+    
   };
 
   return (
@@ -58,7 +61,7 @@ const TourDetails = () => {
                         class="ri-star-fill"
                         style={{ 'color': "var(--secondary-color)" }}
                       ></i>
-                      {calculateAvgRating === 0 ? null : avgRating}
+                      {avgRating === 0 ? null : avgRating}
                       {totalRating === 0 ? (
                         "Not Rated"
                       ) : (
@@ -97,7 +100,7 @@ const TourDetails = () => {
                 <div className="tour__reviews mt-4">
                   <h4>Reviews({reviews?.length} reviews)</h4>
 
-                  <form onSubmit={submitHandler}>
+                  <Form onSubmit={submitHandler}>
                     <div className="d-flex align-items-center gap-3 mb-4 rating__group">
                       <span onClick={()=>setTourRating(1)}>1 <i class="ri-star-s-fill"></i></span>
                       <span onClick={()=>setTourRating(2)}>2 <i class="ri-star-s-fill"></i></span>
@@ -107,10 +110,10 @@ const TourDetails = () => {
                     </div>
 
                     <div className="review__input">
-                      <input type="text" ref={reviewMsgRef}placeholder="share your thoughts" required />
+                      <input type="text" ref={reviewMsgRef} placeholder="share your thoughts" required />
                       <button className="btn primary__btn text-white" type="submit">submit</button>
                     </div>
-                  </form>
+                  </Form>
 
                   <ListGroup className="user__reviews">
                     {
@@ -144,7 +147,7 @@ const TourDetails = () => {
             </Col>
 
             <Col lg='4'>
-
+               <Booking tour={tour} avgRating={avgRating} />
             </Col>
           </Row>
         </Container>
