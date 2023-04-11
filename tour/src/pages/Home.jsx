@@ -5,7 +5,7 @@ import heroImg from "../assets/images/hero-img01.jpg";
 import heroImg02 from "../assets/images/hero-img02.jpg";
 import heroVideo from "../assets/images/hero-video.mp4";
 import experienceImg from  "../assets/images/experienceImg.png"
-import Subtitle from '../shared/Subtitle';
+import Subtitle from './../shared/Subtitle';
 import worldImg from '../assets/images/world.png';
 import SearchBar from '../shared/SearchBar'
 import ServiceList from "../services/ServiceList";
@@ -27,7 +27,7 @@ const Home = () => {
                   <Subtitle subtitle={"know Before You Go"}/>
                   <img src={worldImg} alt="" />
                 </div>
-                <h6>Traveling opens the door to creating {" "}<span className="highlight">memories</span></h6>
+                <h1>Traveling opens the door to creating <span className="highlight">memories</span></h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores perferendis voluptatum, eum expedita rem saepe dolorem, maxime quia aliquid incidunt, velit eligendi vero a assumenda architecto nam ratione minima culpa!</p>
               </div>
             </Col> 
@@ -58,8 +58,8 @@ const Home = () => {
         <container>
           <Row>
             <Col lg='3'>
-              <h5 className="services_subtitle">What we Serve</h5>
-              <h2 className="services_title">We Offer Our Best Services</h2>
+              <h5 className="services__subtitle">What we Serve</h5>
+              <h2 className="services__title">We Offer Our Best Services</h2>
             </Col>
             <ServiceList/>
           </Row>

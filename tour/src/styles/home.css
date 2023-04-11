@@ -3,7 +3,7 @@
     height: 2.3em;
 }
 
-.hero_subtitle h1{
+.hero_content h1{
     font: size 3.2em;
     font-weight: 600;
     margin-top: 1rem;
@@ -37,14 +37,14 @@
     padding-top: 2rem;
 }
 
-.services_subtitle {
-    font-size: 2.2res;
+.services__subtitle {
+    font-size: 2.2rem;
     font-weight: 500;
     color: #ee6e6e;
     font-family: var(--subtitle-font-name);
 }
 
-.services_title{
+.services__title{
     font-size: 2.5rem;
     font-weight: 500;
 }
