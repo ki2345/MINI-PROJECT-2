@@ -85,7 +85,7 @@ const Footer = () => {
                   <span><i class="ri-map-pin-line"></i></span>
                   Address:
                 </h6>
-                <p className='mb-0'>Sylhet,Bangladesh</p>
+                <p className='mb-0'>Uttar Pradesh, India</p>
               </ListGroupItem>
 
               <ListGroupItem  className='ps-0 border-0 d-flex align-items-center gap-3'>

@@ -4,7 +4,8 @@
     margin-bottom: 2.5rem;
  }
 
- .tour__info , .tour__reviews{
+ .tour__info , 
+ .tour__reviews{
     margin-bottom: 2rem;
     border-radius: 0.5rem;
     border: 1px solid rgb(229,231,235);
@@ -27,7 +28,7 @@
     font-size: 1.1rem;
  }
 
- .tour_extra-details{
+ .tour__extra-details{
     display: flex;
     align-items: center;
     column-gap: 2.7rem;

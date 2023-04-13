@@ -85,4 +85,4 @@ const Testimonials = () => {
   </Slider>
 }
 
-export default Testimonials
+export default Testimonials;

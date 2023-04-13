@@ -1,10 +1,10 @@
-.thank_you span{
+.thank__you span{
     font-size: 4rem;
     color: green;
 
 }
 
-.thank_you h1{
+.thank__you h1{
     font-size: 3.6rem;
     font-family: var(--subtitle-font-name);
 }
