@@ -4,7 +4,7 @@ import {Container, Row, Col} from 'reactstrap';
 
 const CommonSection = ({title}) => {
   return (
-    <section className='common_section'>
+    <section className='common__section'>
         <Container>
             <Row>
                 <Col lg='12'>
@@ -16,4 +16,4 @@ const CommonSection = ({title}) => {
   )
 }
 
-export default CommonSection
+export default CommonSection;

@@ -8,7 +8,7 @@ const ThankYou = () => {
       <Container>
         <Row>
           <Col lg='12' className='pt-5 text-center'>
-            <div className="thank_you">
+            <div className="thank__you">
               <span><i class="ri-checkbox-circle-line"></i></span>
               <h1 className='mb-3 fw-semibold'>Thank You</h1>
               <h1 className='mb-4'>Your tour is booked</h1> 

@@ -28,12 +28,12 @@ const Register = () => {
       <Container>
         <Row>
           <Col lg="8" className="m-auto">
-            <div className="login_container d-flex justify-content-between">
-              <div className="login_img">
+            <div className="login__container d-flex justify-content-between">
+              <div className="login__img">
                 <img src={registerImg} alt="" />
               </div>
 
-              <div className="login_form">
+              <div className="login__form">
                 <div className="user">
                   <img src={userIcon} alt="" />
                 </div>
@@ -69,7 +69,7 @@ const Register = () => {
                   </FormGroup>
                   
                     <Button
-                      className="btn secondary_btn auth_btn"
+                      className="btn secondary__btn auth__btn"
                       type="submit"
                     >
                       Create Account
@@ -77,7 +77,7 @@ const Register = () => {
                   
                 </Form>
 
-                <p>Already have an account? <Link to='/Login'>login</Link></p>
+                <p>Already have an account? <Link to='/Login'>Login</Link></p>
               </div>
             </div>
           </Col>

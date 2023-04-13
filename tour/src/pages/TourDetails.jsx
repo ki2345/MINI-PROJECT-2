@@ -75,7 +75,7 @@ const TourDetails = () => {
                     </span>
                   </div>
 
-                  <div className="tour_extra-details">
+                  <div className="tour__extra-details">
                     <span>
                       <i class="ri-map-pin-line"></i>
                       {city}
