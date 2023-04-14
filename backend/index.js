@@ -30,6 +30,7 @@ app.use(cors())
 app.use(cookieParser())
 app.use('/tours', tourRoute)
 
+//listening on port
 app.listen(port,()=>{
     connect();
     console.log('server listening on port',port);
