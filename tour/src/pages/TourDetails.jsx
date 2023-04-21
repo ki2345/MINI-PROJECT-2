@@ -1,19 +1,27 @@
-import React,{useRef,useState} from "react";
+import React,{useEffect, useRef,useState,useContext} from "react";
 import "../styles/tour-details.css";
 import { Container, Row, Col, Form, ListGroup } from "reactstrap";
 import { useParams } from "react-router-dom";
-import tourData from "../assets/Data/tour";
 import calculateAvgRating from "../utils/avgRating";
 import avatar from "../assets/images/avatar.jpg";
 import Booking from "../components/Booking/Booking";
 import NewsLetter from '../shared/Newsletter'
+import {BASE_URL} from './../utils/config'
+import useFetch from './../hooks/useFetch';
+import {AuthContext} from './../context/AuthContext'
+
+
 const TourDetails = () => {
   const { id } = useParams();
   const reviewMsgRef=useRef('')
   const [tourRating,setTourRating]=useState(null)
+  const {user} = useContext(AuthContext);
 
-  //this is a static data later we will call our API and load our data from database
-  const tour = tourData.find((tour) => tour.id === id);
+//fetch data from database
+const  {data:tour,loading,error} = useFetch(`${BASE_URL}tours/${id}`);
+
+
+
 
   //destructive properties from tour object
   const {
@@ -34,20 +42,54 @@ const TourDetails = () => {
   const options = { day: "numeric", month: "long", year: "numeric" };
 
   //submit request to the server
-  const submitHandler=e=>{
+  const submitHandler=async e=>{
     e.preventDefault()
     const reviewText = reviewMsgRef.current.value;
     
+    
 
-    //later will call our api
+    try {
+      if(!user || user===undefined || user=== null)
+    {
+      alert("please sign in")
+    }
+    const  reviewObj={
+      username:user.username,
+      reviewText,
+      rating:tourRating
+    }
+
+    const res = await fetch(`${BASE_URL}/review/${id}`,{
+      method:'post',
+      headers:{
+        'content-type':"application/json"
+      },
+      credentials:'include',
+      body:JSON.stringify(reviewObj)
+    })
+
+   const result= await res.json()
+    alert(result.message);
+    } catch (err) {
+      alert(err.message);
+    }
+
     
   };
+
+
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[tour ])
 
   return (
     <>
       <section>
         <Container>
-          <Row>
+          { loading && <h4 className='text-center pt-5'>loading.......</h4>}
+          { error && <h4 className="text-center pt-5" >{error}</h4>}
+          
+        {!loading && !error && <Row>
             <Col lg="8">
               <div className="tour__content">
                 <img src={photo} alt="" />
@@ -150,6 +192,8 @@ const TourDetails = () => {
                <Booking tour={tour} avgRating={avgRating} />
             </Col>
           </Row>
+          }
+
         </Container>
       </section>
       <NewsLetter />
