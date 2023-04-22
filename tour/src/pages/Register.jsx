@@ -29,7 +29,7 @@ const Register = () => {
     try {
       const res= await fetch( `${BASE_URL}/auth/register`,{
         method:'post',
-        header:{
+        headers:{
           'content-type':'application/json'
         },
         body:JSON.stringfy(credentials)
@@ -41,7 +41,7 @@ const Register = () => {
       dispatch({type:'REGISTER_SUCCESS'})
       navigate('/login')
     } catch (err) {
-      console.log(err.message)
+      alert(err.message)
     }
   }
 

@@ -33,12 +33,12 @@ const Home = () => {
             </Col> 
 
             <Col lg='2'>
-              <div className="hero__img-box">
+              <div className="hero__img-box ">
                 <img src={heroImg} alt="" />
                 </div>  
             </Col> 
             <Col lg='2'>
-              <div className="hero__img-box mt-4">
+              <div className="hero__img-box hero__video-box mt-4">
                 <video src={heroVideo} alt="" controls/>
                 </div>  
             </Col> 
