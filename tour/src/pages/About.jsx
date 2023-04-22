@@ -10,7 +10,7 @@ const About = () => {
       <section>
         <Container>
           <Row>
-            <h1>
+            <h1 className="head">
               About <span>YatraSphere</span>
             </h1>
             <Col lg="6">
