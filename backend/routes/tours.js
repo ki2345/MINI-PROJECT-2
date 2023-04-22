@@ -5,9 +5,9 @@ import { verifyAdmin } from '../utils/verifyToken.js'
 const router = express.Router()
 
 //create new tour
-router.post('/',verifyAdmin,createTour)
+router.post('/',verifyAdmin, createTour)
 //update new tour
-router.put('/:id',verifyAdmin,updateTour)
+router.put('/:id', verifyAdmin, updateTour)
 //delete tour
 router.delete('/:id',verifyAdmin,deleteTour)
 //get single tour

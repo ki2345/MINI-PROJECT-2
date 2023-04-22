@@ -70,7 +70,8 @@ export const getSingleUser=async(req,res)=>{
 export const getAllUser=async(req,res)=>{
     //for pagination
     try{
-      const users=await User.find({}).skip(page*8).limit(8);
+        const users=await User.find({})
+    //   const users=await User.find({}).skip(page*8).limit(8);
       res.status(200).json({success:true,
         message:'Successful',
         data:users})

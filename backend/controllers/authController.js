@@ -14,7 +14,7 @@ export const register = async (req,res)=>{
             username:req.body.username,
             email:req.body.email,
             password:hash,
-            photo:req.body.photo
+            photo:req.body.photo,
         })
         
         await newUser.save();
@@ -36,14 +36,14 @@ export const login = async (req,res)=>{
 
     try{
         const user = await User.findOne({email})
-
+    //if user doesn't exist
         if(!user)
         {
             return res.status(404).json({
                 success:false,message:"user not exist"
             })
         }
-
+        //if user exist then check the password or compare the password
         const checkCorrectPassword = await bcrypt.compare(req.body.password,user.password);
         //if password is incorrect 
         if(!checkCorrectPassword)
@@ -61,7 +61,7 @@ export const login = async (req,res)=>{
 
         res.cookie('accessToken',token,{
             httpOnly:true,expires:token.expiresIn
-        }).status(200).json({token,data:{...rest},role})
+        }).status(200).json({token,data:{...rest},role,})
     }
     catch(err)
     {

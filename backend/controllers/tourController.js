@@ -86,9 +86,9 @@ export const getAllTour=async(req,res)=>{
 //get tour by search
 
 export const getTourBySearch = async (req,res)=>{
-    const city =new RegExp(req.query.distance)
-    const distance= parseInt(req.query.distance)
-    const maxGroupSize= parseInt(req.query.maxGroupSize)
+    const city =new RegExp(req.query.city,"i");
+    const distance= parseInt(req.query.distance);
+    const maxGroupSize= parseInt(req.query.maxGroupSize);
 
     try{
         //gte means greater than equal
@@ -127,7 +127,7 @@ export const getFeaturedTour=async(req,res)=>{
 //get  tour count
 export const getTourCount = async(req,res)=>{
     try{
-        const tourCount = await Tour.estimateDocumentCount();
+        const tourCount = await Tour.estimatedDocumentCount();
         res.status(200).json({
             success:true,
             data:tourCount

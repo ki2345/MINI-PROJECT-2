@@ -37,11 +37,14 @@ const connect=async()=>{
 app.use(express.json())
 app.use(cors(corsOptions))
 app.use(cookieParser())
+// app.use('/tours',tourRoute)
+// app.use('/users',userRoute)
+// app.use('/auth',authRoute)
 app.use('/api/v1/tours', tourRoute)
-app.use('api/v1//Users',userRoute)
-app.use('api/v1/auth',authRoute)
-app.use('api/v1/review',reviewRoute)
-app.use('api/v1/booking',bookingRoute)
+app.use('/api/v1//Users',userRoute)
+app.use('/api/v1/auth',authRoute)
+app.use('/api/v1/review',reviewRoute)
+app.use('/api/v1/booking',bookingRoute)
 
 
 

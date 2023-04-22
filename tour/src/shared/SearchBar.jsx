@@ -1,7 +1,7 @@
 import React,{useRef}from "react";
 import "./Search-Bar.css";
 import { Col, Form, FormGroup } from "reactstrap";
-import { BASE_URL } from "../utils/config";
+import { BASE_URL } from "./../utils/config";
 import { useNavigate } from "react-router-dom";
 const SearchBar = () => {
 

@@ -18,7 +18,7 @@ const Tours = () => {
   const {data: tourCount} = useFetch(`${BASE_URL}/tours/search/getTourCount`);
 
   useEffect(() => {
-      const pages = Math.ceil(tourCount / 4);
+      const pages = Math.ceil(tourCount / 8);
       setPageCount(pages);
       window.scrollTo(0, 0);
   },[page, tourCount, tours]);
@@ -45,8 +45,8 @@ const Tours = () => {
           {
             !loading && !error && <Row>
             {
-              tours?.map(tour => <Col lg='3' className='mb-4' key={tour._id}>
-                <TourCard tour={tour} /></Col>)
+              tours?.map(tour => (<Col lg='3' className='mb-4' key={tour._id}>
+                <TourCard tour={tour} /></Col>))
             }
             <Col lg='12'>
               <div className="pagination d-flex align-items-center
