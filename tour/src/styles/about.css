@@ -1,0 +1,18 @@
+.head{
+    text-align: center;
+    margin-left: 180px;
+    padding-bottom: 30px;
+}
+span{
+    color: var(--secondary-color);
+}
+p{
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 992px){
+    .head{
+        text-align: center;
+        margin-left: 0px;
+    }
+}
