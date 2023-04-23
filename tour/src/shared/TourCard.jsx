@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import calculateAvgRating from '../utils/avgRating';
 
 import './Tour-card.css'
+
+
+
 const TourCard = ({ tour }) => {
   const { _id, title, city, photo, price, featured, reviews } = tour;
 

@@ -11,7 +11,7 @@ import {BASE_URL} from './../utils/config';
 const Register = () => {
 
   const [credentials, setCredentials] = useState({
-    Username:undefined, 
+    username:undefined, 
     email:undefined,
      password:undefined
   });
@@ -32,11 +32,11 @@ const Register = () => {
         headers:{
           'content-type':'application/json'
         },
-        body:JSON.stringfy(credentials)
+        body:JSON.stringify(credentials)
       })
       const result = await res.json()
 
-      if(!res.ok) alert(result.message)
+      if(!res.ok) alert(result.message) 
 
       dispatch({type:'REGISTER_SUCCESS'})
       navigate('/login')
@@ -63,14 +63,14 @@ const Register = () => {
                 </div>
                 <h2>Register</h2>
 
-                <Form onSubmit={handleChange}>
+                <Form onSubmit={handleClick}>
                 <FormGroup>
                     <input
                       type="email"
                       placeholder="email"
                       required
                       id="email"
-                      onchange={handleChange}
+                      onChange={handleChange}
                     />
                   </FormGroup>
                   <FormGroup>
@@ -79,14 +79,14 @@ const Register = () => {
                       placeholder="Username"
                       required
                       id="username"
-                      onchange={handleChange}
+                      onChange={handleChange}
                     />
                   </FormGroup>
                   <FormGroup>
                     <input
                       type="password"
                       id="password"
-                      onchange={handleChange}
+                      onChange={handleChange}
                       placeholder="password"
                       required
                     />

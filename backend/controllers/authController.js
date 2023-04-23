@@ -25,8 +25,9 @@ export const register = async (req,res)=>{
     catch(err)
     {
         res.status(500).json({
-            success:false,message:"failed to create try again"
+            success:false,message:"failed create try again"
         })
+        
     }
 }
 

@@ -67,21 +67,21 @@ const Login = () => {
                 </div>
                 <h2>Login</h2>
 
-                <Form onSubmit={handleChange}>
+                <Form onSubmit={handleClick}>
                   <FormGroup>
                     <input
                       type="text"
                       placeholder="Email"
                       required
                       id="email"
-                      onchange={handleChange}
+                      onChange={handleChange}
                     />
                   </FormGroup>
                   <FormGroup>
                     <input
                       type="password"
                       id="password"
-                      onchange={handleChange}
+                      onChange={handleChange}
                       placeholder="password"
                       required
                     />

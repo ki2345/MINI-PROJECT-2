@@ -51,7 +51,7 @@
 .login__form input focus{
     outline:none;
 }
-.auth_btn{
+.auth__btn{
     background: var(--heading-color) !important;
     width: 100%;
     color: #fff !important;
