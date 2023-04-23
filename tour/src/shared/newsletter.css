@@ -1,10 +1,12 @@
 .newsletter{
-    background: #cae5f4;
+    /* background: #cae5f4; */
+    background-color: rgb(201, 120, 62);
     padding:0;
     margin-top: 3rem;
 }
 .newsletter__img img{
-    width:100%;
+    width: 700px;
+    height: 500px;
 }
 .newsletter__content{
     padding:50px 0;
@@ -17,10 +19,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #fff;
+    /* background: #fff; */
     padding: 0.5rem;
     margin-bottom: 2rem;
     border-radius: 5px;
+    background-image:linear-gradient(to left,white,rgb(243, 211, 124));
+}
+.newsletter__input .inp{
+    border-radius: 7px;
 }
 .newsletter__input{
   border:none;

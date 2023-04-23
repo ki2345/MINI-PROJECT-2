@@ -2,7 +2,7 @@ import React from 'react'
 import './newsletter.css'
 
 import {Container,Row,Col} from 'reactstrap';
-import maleTourist from '../assets/images/male-tourist.png';
+import grpTourist from '../assets/images/newspic.png';
 
 const Newsletter = () => {
   return (
@@ -13,15 +13,15 @@ const Newsletter = () => {
                 <div className="newsletter__content">
                     <h2>Subscribe now to get useful traveling information.</h2>
                     <div className="newsletter__input">
-                        <input type="email" placeholder='Enter your email'/>
+                        <input type="email" placeholder='Enter your email' className='inp'/>
                         <button className="btn newsletter__btn">Subscribe</button>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi vel totam illo quae ipsam eos?</p>
+                    <p>To connect with us in the future, kindly subscribe to our website.</p>
                 </div>
             </Col>
             <Col lg="6">
                 <div className='newsletter__img'>
-                  <img src={maleTourist} alt=""/>
+                  <img src={grpTourist} alt=""/>
                 </div>
             </Col>
         </Row>
@@ -30,4 +30,4 @@ const Newsletter = () => {
   )
 }
 
-export default Newsletter
+export default Newsletter;

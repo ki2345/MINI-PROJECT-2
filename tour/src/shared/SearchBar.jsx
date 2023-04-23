@@ -40,7 +40,7 @@ const SearchBar = () => {
             </span>
             <div>
               <h6>Location</h6>
-              <input type="text" placeholder="where are you going ? " ref={LocationRef}/>
+              <input type="text" placeholder="where are you going ? " className="inp1" ref={LocationRef}/>
             </div>
           </FormGroup>
 
@@ -50,7 +50,7 @@ const SearchBar = () => {
             </span>
             <div>
               <h6>Distance</h6>
-              <input type="number" placeholder="Distance (km) " ref={DistanceRef} />
+              <input type="number" placeholder="Distance (km) " className="inp1" ref={DistanceRef} />
             </div>
           </FormGroup>
 
@@ -60,7 +60,7 @@ const SearchBar = () => {
             </span>
             <div>
               <h6>Max People</h6>
-              <input type="number" placeholder="0" ref={maxGroupSizeRef} />
+              <input type="number" placeholder="0" className="inp1" ref={maxGroupSizeRef} />
             </div>
           </FormGroup>
 

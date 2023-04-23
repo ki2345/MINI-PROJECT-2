@@ -30,7 +30,9 @@
 .form__group-fast{
 border-right: 2px solid #ddd;
 }
-
+.inp1{
+    border-radius: 7px;
+}
 .search__icon i{
     font-size: 1.6rem;
     padding: 0.5rem;

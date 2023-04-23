@@ -42,7 +42,7 @@ const Footer = () => {
        <Col lg='3'>
         <div className="logo">
           <img src={logo} alt="" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque debitis mollitia qui.</p>
+          <p>YatraSphere is user-friendly website. If you have any query, contact us on below social media apps.</p>
 
           <div className="social__links d-flex align-items-center gap-4">
             <span>

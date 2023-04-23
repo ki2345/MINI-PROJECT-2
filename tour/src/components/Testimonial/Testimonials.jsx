@@ -1,8 +1,9 @@
 import React from 'react';
 import Slider from 'react-slick';
-import ava01 from '../../assets/images/ava-1.jpg';
-import ava02 from '../../assets/images/ava-2.jpg';
-import ava03 from '../../assets/images/ava-3.jpg';
+import ava01 from '../../assets/images/pic1.jpg';
+import ava02 from '../../assets/images/pic2.jpg';
+import ava03 from '../../assets/images/pic3.jpg';
+import '../../components/Testimonial/Testimonial.css';
 
 const Testimonials = () => {
   const settings = {
@@ -36,48 +37,48 @@ const Testimonials = () => {
   };
   return <Slider {...settings}>
     <div className='testimonial py-4 px-3'>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam aliquid culpa quas unde officia fugiat dignissimos asperiores est consequatur ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, consequuntur!you</p>
+      <p>I must say the service we received from this company was amazing and would recommend them to anyone to trust and use them the rewards you get with your holidays are just fantastic</p>
 
       <div className='d-flex align-items-center gap-4 mt-3'>
-        <img src={ava01} className='w-25 h-25 rounded-2' alt="" />
+        <img src={ava01} className='rounded-2 r__pic' alt="" />
         <div>
-          <h6 className='mb-0 mt-3'>John Doe</h6>
+          <h6 className='mb-0 mt-3'>Kiran</h6>
           <p>Customer</p>
         </div>
       </div>
     </div>
 
     <div className='testimonial py-4 px-3'>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam aliquid culpa quas unde officia fugiat dignissimos asperiores est consequatur ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, consequuntur!you</p>
+      <p>YatraSphere has such a user-friendly website. Easy to navigate, search and fiddle with dates instead of having to call up. Once decided, the booking process was swift and easy, thank you.</p>
 
       <div className='d-flex align-items-center gap-4 mt-3'>
-        <img src={ava02} className='w-25 h-25 rounded-2' alt="" />
+        <img src={ava02} className='rounded-2 r__pic' alt="" />
         <div>
-          <h6 className='mb-0 mt-3'>John Doe</h6>
+          <h6 className='mb-0 mt-3'>Rishika</h6>
           <p>Customer</p>
         </div>
       </div>
     </div>
 
     <div className='testimonial py-4 px-3'>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam aliquid culpa quas unde officia fugiat dignissimos asperiores est consequatur ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, consequuntur!you</p>
+      <p>I would definitely recommend your services. It was so easy to book and get all the information needed. Had a prompt reply with my query. Will not hesitate to book with you again.</p>
 
       <div className='d-flex align-items-center gap-4 mt-3'>
-        <img src={ava03} className='w-25 h-25 rounded-2' alt="" />
+        <img src={ava03} className='rounded-2 r__pic' alt="" />
         <div>
-          <h6 className='mb-0 mt-3'>John Doe</h6>
+          <h6 className='mb-0 mt-3'>Sandeep</h6>
           <p>Customer</p>
         </div>
       </div>
     </div>
 
     <div className='testimonial py-4 px-3'>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam aliquid culpa quas unde officia fugiat dignissimos asperiores est consequatur ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, consequuntur!you</p>
+      <p>Our holiday ran seamlessly, with no problems. All communication was answered quickly and efficiently. We will definitely be using YatraSphere for our future travel arrangements</p>
 
       <div className='d-flex align-items-center gap-4 mt-3'>
-        <img src={ava02} className='w-25 h-25 rounded-2' alt="" />
+        <img src={ava02} className='rounded-2 r__pic' alt="" />
         <div>
-          <h6 className='mb-0 mt-3'>John Doe</h6>
+          <h6 className='mb-0 mt-3'>Rishika</h6>
           <p>Customer</p>
         </div>
       </div>

@@ -14,6 +14,12 @@
     color:var(--heading-color);
     margin-bottom: 1rem;
 }
+div.col-lg-3{
+    background-image:linear-gradient(to left,white,rgb(243, 211, 124));
+}
+.footer__quick-links li{
+    background-image:linear-gradient(to left,white,rgb(243, 211, 124));
+}
 .footer__quick-links li a{
     text-decoration: none;
     color:var(--text-color);

@@ -1,9 +1,10 @@
 import React from "react";
 import "../styles/home.css";
 import { container, Row, Col } from "reactstrap";
-import heroImg from "../assets/images/hero-img01.jpg";
-import heroImg02 from "../assets/images/hero-img02.jpg";
-import heroVideo from "../assets/images/hero-video.mp4";
+// import heroImg from "../assets/images/hero-img01.jpg";
+import img01 from "../assets/images/dubai.png";
+import heroImg02 from "../assets/images/backwater.jpg";
+import heroVideo from "../assets/images/title-artist.mp4";
 import experienceImg from  "../assets/images/experienceImg.png"
 import Subtitle from './../shared/Subtitle';
 import worldImg from '../assets/images/world.png';
@@ -27,14 +28,14 @@ const Home = () => {
                   <Subtitle subtitle={"know Before You Go"}/>
                   <img src={worldImg} alt="" />
                 </div>
-                <h1>Traveling opens the door to creating <span className="highlight">memories</span></h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores perferendis voluptatum, eum expedita rem saepe dolorem, maxime quia aliquid incidunt, velit eligendi vero a assumenda architecto nam ratione minima culpa!</p>
+                <h1>Travel smarter, not harder, with <span className="highlight">YatraSphere!</span></h1>
+                <p>It is your ultimate travel partner, dedicated to providing you with the best experiences possible. We understand that travel is not just about visiting a destination, but about creating memories that will last a lifetime. That's why we offer a wide range of tours and travel packages to suit every kind of traveler. </p>
               </div>
             </Col> 
 
             <Col lg='2'>
               <div className="hero__img-box ">
-                <img src={heroImg} alt="" />
+                <img src={img01} alt="" />
                 </div>  
             </Col> 
             <Col lg='2'>
@@ -91,23 +92,23 @@ const Home = () => {
                    <h2>With our all experience <br />we will serve you
                    </h2>
                    <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, natus?
+                      We have conducted many tours successfully without any hurdles.
                     <br />
-                    Lorem ipsum dolor, sit amet consectetur adipisicing.
+                      Customers are happy with our services and we promise to continue this forever.
                    </p>
                 </div>
 
                 <div className="counter__wrapper d-flex align-items-center gap-5">
                   <div className="counter__box">
-                    <span>12k+</span>
+                    <span>2k+</span>
                     <h6>Successful trip</h6>
                   </div>
                   <div className="counter__box">
-                    <span>2k+</span>
+                    <span>1k+</span>
                     <h6>Regular clients</h6>
                   </div>
                   <div className="counter__box">
-                    <span>15</span>
+                    <span>3</span>
                     <h6>Years experience</h6>
                   </div>
                 </div>
