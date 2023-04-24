@@ -12,11 +12,7 @@ const quick__links =[
   {
     path:'/about',
     display:'About'
-  },
-  {
-    path:'/tours',
-    display:'Tours'
-  },
+  }
 ];
 
 const quick__links2 =[
@@ -25,13 +21,9 @@ const quick__links2 =[
     display:'Gallery'
   },
   {
-    path:'/login',
-    display:'Login'
-  },
-  {
-    path:'/register',
-    display:'Register'
-  },
+    path:'/tours',
+    display:'Tours'
+  }
 ];
 
 const Footer = () => {
@@ -46,16 +38,16 @@ const Footer = () => {
 
           <div className="social__links d-flex align-items-center gap-4">
             <span>
-              <Link to='#'><i class="ri-youtube-line"></i></Link>
+              <Link to='https://www.youtube.com/'><i class="ri-youtube-line"></i></Link>
             </span>
             <span>
-              <Link to='#'><i class="ri-github-fill"></i></Link>
+              <Link to='https://github.com/'><i class="ri-github-fill"></i></Link>
             </span>
             <span>
-              <Link to='#'><i class="ri-facebook-circle-line"></i></Link>
+              <Link to='https://www.facebook.com/'><i class="ri-facebook-circle-line"></i></Link>
             </span>
             <span>
-              <Link to='#'><i class="ri-instagram-line"></i></Link>
+              <Link to='https://www.instagram.com/accounts/login/'><i class="ri-instagram-line"></i></Link>
             </span>
 
           </div>
