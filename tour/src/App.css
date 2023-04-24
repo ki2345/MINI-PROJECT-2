@@ -19,7 +19,7 @@
 
 body {
   font-family: var(--font-name);
-  background-image:linear-gradient(to left,white,rgb(243, 211, 124));
+  background: var(--body-background);
 }
 
 section {
