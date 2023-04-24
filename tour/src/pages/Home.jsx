@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/home.css";
-import { container, Row, Col } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 // import heroImg from "../assets/images/hero-img01.jpg";
 import img01 from "../assets/images/dubai.png";
 import heroImg02 from "../assets/images/backwater.jpg";
@@ -20,7 +20,7 @@ const Home = () => {
     <div>
       {/* hero section start */}
       <section>
-        <container>
+        <Container>
           <Row>
             <Col lg='6'>
               <div className="hero__content">
@@ -51,12 +51,12 @@ const Home = () => {
 
             <SearchBar/>
           </Row>
-        </container>
+        </Container>
       </section>
       {/* hero section ends */}
 
       <section>
-        <container>
+        <Container>
           <Row>
             <Col lg='3'>
               <h5 className="services__subtitle">What we Serve</h5>
@@ -64,12 +64,12 @@ const Home = () => {
             </Col>
             <ServiceList/>
           </Row>
-        </container>
+        </Container>
       </section>
 
       {/* featured tour section starts */}
       <section>
-        <container>
+        <Container>
           <Row>
             <Col lg='12' className="mb-5">
                 <Subtitle subtitle={"Explore"}/>
@@ -77,13 +77,13 @@ const Home = () => {
             </Col>
             <FeaturedTourList/>
           </Row>
-        </container>
+        </Container>
       </section>
 
       {/* featured tour section ends */}
       {/* experience section start */}
       <section>
-        <container>
+        <Container>
           <Row>
             <Col lg='6'>
                 <div className="experience__content">
@@ -119,12 +119,12 @@ const Home = () => {
               </div>
             </Col>
           </Row>
-        </container>
+        </Container>
       </section>
       {/* experience section end */}
       {/* gallery section start */}
       <section>
-        <container>
+        <Container>
          <Row>
           <Col lg='12'>
             <Subtitle subtitle={'Gallery'}/>
@@ -136,12 +136,12 @@ const Home = () => {
               <MasonryImagesGallery/>
           </Col>
          </Row>
-        </container>
+        </Container>
       </section>
       {/* gallery section end */}
       {/* testimonial section start */}
       <section>
-        <container>
+        <Container>
           <Row>
             <Col lg='12'>
               <Subtitle subtitle={'Fans Love'}/>
@@ -153,7 +153,7 @@ const Home = () => {
               <Testimonials/>
             </Col>
           </Row>
-        </container>
+        </Container>
       </section>
       {/* testimonial section end */}
       <Newsletter/>
