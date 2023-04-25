@@ -11,12 +11,12 @@
 }
 
 [data-theme="dark"]{
-    --body-background: rgb(10, 7, 7) !important;
+    --body-background: linear-gradient(to left,rgb(70, 68, 68),rgb(10, 10, 10)) !important;
     --primary-color: #cc621b;
     --secondary-color: #cc6a3d;
     --heading-color:#ebebeb;
-    /* --text-color: #6e7074; */
-    --text-color: rgb(253, 196, 39);
+    color: azure;
+    --text-color: #ebebeb;
     --font-name: "Montserrat", sans-serif;
     --subtitle-font-name: "Island Moments", cursive;
 }

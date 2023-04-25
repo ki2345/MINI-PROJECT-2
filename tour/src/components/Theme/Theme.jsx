@@ -16,6 +16,10 @@ const Theme = () => {
     if(selectedTheme === "light"){
         setLightMode();
     }
+    else
+    {
+        setDarkMode();
+    }
     const toggleTheme = (e) => {
         if(e.target.checked)
             setDarkMode();
