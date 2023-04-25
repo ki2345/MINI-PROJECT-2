@@ -14,6 +14,8 @@ import FeaturedTourList from "../components/Featured-Tours/FeaturedTourList";
 import MasonryImagesGallery from "../components/Image-gallery/MasonryImagesGallery";
 import Testimonials from "../components/Testimonial/Testimonials";
 import Newsletter from "../shared/Newsletter";
+import Googlemap from "../components/Map/Maps";
+import {Routes,Route,useNavigate} from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -21,6 +23,7 @@ const Home = () => {
       {/* hero section start */}
       <section>
         <Container>
+          <button onClick={<Googlemap/>} className='bg-success'>Click for location</button>
           <Row>
             <Col lg='6'>
               <div className="hero__content">

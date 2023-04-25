@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { ChakraProvider, theme } from '@chakra-ui/react'
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "remixicon/fonts/remixicon.css";
@@ -16,7 +17,9 @@ root.render(
   <React.StrictMode>
     <AuthContextProvider>
     <BrowserRouter>
-    <App />
+    <ChakraProvider theme={theme}>
+      <App />
+    </ChakraProvider>
     </BrowserRouter>
     </AuthContextProvider>
   </React.StrictMode>
