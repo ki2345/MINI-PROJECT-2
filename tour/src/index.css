@@ -1,0 +1,26 @@
+/* for dark/light theme purpose css */
+:root {
+    --body-background: linear-gradient(to left,white,rgb(243, 211, 124)) !important;
+    --primary-color: #cc621b;
+    --secondary-color: #cc6a3d;
+    --heading-color:#0b2727;
+    /* --text-color: #6e7074; */
+    --text-color: rgb(82, 80, 80);
+    --font-name: "Montserrat", sans-serif;
+    --subtitle-font-name: "Island Moments", cursive;
+}
+
+[data-theme="dark"]{
+    --body-background: linear-gradient(to left,rgb(70, 68, 68),rgb(10, 10, 10)) !important;
+    --primary-color: #cc621b;
+    --secondary-color: #cc6a3d;
+    --heading-color:#ebebeb;
+    color: azure;
+    --text-color: #ebebeb;
+    --font-name: "Montserrat", sans-serif;
+    --subtitle-font-name: "Island Moments", cursive;
+}
+
+*{
+    transition: all 0.3s ease-in-out;
+}

@@ -3,7 +3,8 @@ import {Container,Row,Button} from 'reactstrap';
 import { NavLink,Link ,useNavigate} from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import './header.css';
-import {AuthContext}  from './../../context/AuthContext'
+import {AuthContext}  from './../../context/AuthContext';
+import Theme from '../Theme/Theme';
 
 const nav__links =[
   {
@@ -52,7 +53,7 @@ const Header = () => {
     <Container>
       <Row>
         <div className="nav__wrapper d-flex align-items-center justify-content-between">
-
+        <Theme/>
           <div className="logo">
            <img src={logo} alt=""/>
           </div>
