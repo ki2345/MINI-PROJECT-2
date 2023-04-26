@@ -15,15 +15,17 @@ import MasonryImagesGallery from "../components/Image-gallery/MasonryImagesGalle
 import Testimonials from "../components/Testimonial/Testimonials";
 import Newsletter from "../shared/Newsletter";
 import Googlemap from "../components/Map/Maps";
-import {Routes,Route,useNavigate} from 'react-router-dom';
+import {Routes,Route,useNavigate,NavLink} from 'react-router-dom';
 
 const Home = () => {
+  
+
   return (
     <div>
       {/* hero section start */}
       <section>
         <Container>
-          <button onClick={<Googlemap/>} className='bg-success'>Click for location</button>
+          {/* <button onClick={<Googlemap/>} className='bg-success'>Click for location</button> */}
           <Row>
             <Col lg='6'>
               <div className="hero__content">
@@ -51,9 +53,9 @@ const Home = () => {
                 <img src={heroImg02} alt="" />
                 </div>  
             </Col> 
-
-            <SearchBar/>
           </Row>
+            <SearchBar/>
+             
         </Container>
       </section>
       {/* hero section ends */}
