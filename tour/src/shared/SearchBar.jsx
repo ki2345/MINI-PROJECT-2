@@ -2,7 +2,7 @@ import React,{useRef}from "react";
 import "./Search-Bar.css";
 import { Col, Form, FormGroup } from "reactstrap";
 import { BASE_URL } from "./../utils/config";
-import { useNavigate } from "react-router-dom";
+import { useNavigate ,NavLink} from "react-router-dom";
 const SearchBar = () => {
 
     const LocationRef=useRef('');
@@ -27,8 +27,8 @@ const SearchBar = () => {
         const result = await res.json();
         navigate(`/tours/search?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`, {state: result.data});
       }
-
-
+ 
+  const mapPath = "/Map";
 
   return ( 
     <Col lg="12">
@@ -65,7 +65,13 @@ const SearchBar = () => {
           </FormGroup>
 
             <span className="serarch__icon" type="submit" onClick={searchHandler}><i class="ri-search-line"></i></span>
-
+            <div className="map">
+            <NavLink to={mapPath} 
+                  className={navClass=>navClass.isActive? 'active__link':""
+                  }
+                  >
+                  <span>OPEN MAP</span></NavLink>
+            </div>
         </Form>
       </div>
     </Col>

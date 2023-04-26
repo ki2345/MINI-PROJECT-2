@@ -41,6 +41,17 @@ border-right: 2px solid #ddd;
     border-radius: 10px 5px 10px  5px;
     cursor: pointer;
 }
+
+.map{
+    background-color:burlywood;
+    border-radius: 10%;
+
+}
+.map span{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font: 0.9rem;
+}
 @media only screen and (max-width: 992px) {
     .search__bar{
         width: 100%;
