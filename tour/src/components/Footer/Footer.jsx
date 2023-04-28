@@ -3,6 +3,7 @@ import './footer.css';
 import { Container, Row , Col ,ListGroup ,ListGroupItem} from 'reactstrap';
 import { Link } from 'react-router-dom';
 import logo from "../../assets/images/logo.png";
+// import scroll from 'react-scroll-to-top';
 
 const quick__links =[
   {
@@ -54,6 +55,7 @@ const Footer = () => {
         </div>
         </Col> 
         <Col lg='3'>
+          {/* <scroll/> */}
           <h5 className='footer__link-title'>Discover</h5>
           <ListGroup className='footer__quick-links'>
             {

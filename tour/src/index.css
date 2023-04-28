@@ -1,6 +1,6 @@
 /* for dark/light theme purpose css */
 :root {
-    --body-background: linear-gradient(to left,white,rgb(243, 211, 124)) !important;
+    --body-background: linear-gradient(to left,white,rgb(243, 211, 124)) !important ;
     --primary-color: #cc621b;
     --secondary-color: #cc6a3d;
     --heading-color:#0b2727;

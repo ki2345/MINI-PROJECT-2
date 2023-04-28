@@ -43,9 +43,9 @@ border-right: 2px solid #ddd;
 }
 
 .map{
-    background-color:burlywood;
-    border-radius: 10%;
-
+    background-color:rgb(232, 184, 123);
+    border-radius: 10px;
+    padding: 5px 10px;
 }
 .map span{
     font-family: Arial, Helvetica, sans-serif;

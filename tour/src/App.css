@@ -20,6 +20,8 @@
 body {
   font-family: var(--font-name);
   background: var(--body-background);
+  /* background-image:linear-gradient(to left,white,rgb(243, 211, 124)); */
+
 }
 
 section {
