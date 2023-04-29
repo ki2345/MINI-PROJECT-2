@@ -4,7 +4,6 @@
     --primary-color: #cc621b;
     --secondary-color: #cc6a3d;
     --heading-color:#0b2727;
-    /* --text-color: #6e7074; */
     --text-color: rgb(82, 80, 80);
     --font-name: "Montserrat", sans-serif;
     --subtitle-font-name: "Island Moments", cursive;
@@ -16,10 +15,13 @@
     --secondary-color: #cc6a3d;
     --heading-color:#ebebeb;
     color: azure;
-    --text-color: #ebebeb;
+    --text-color: #3c7894;
     --font-name: "Montserrat", sans-serif;
     --subtitle-font-name: "Island Moments", cursive;
+    
+    
 }
+
 
 *{
     transition: all 0.3s ease-in-out;
