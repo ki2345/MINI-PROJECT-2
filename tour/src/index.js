@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {BrowserRouter} from "react-router-dom";
 import { AuthContextProvider } from './context/AuthContext';
+import ScrollToTop from './components/ScrollToTop';
 
 
 
@@ -18,6 +19,7 @@ root.render(
     <AuthContextProvider>
     <BrowserRouter>
     <ChakraProvider theme={theme}>
+    <ScrollToTop/>
       <App />
     </ChakraProvider>
     </BrowserRouter>
