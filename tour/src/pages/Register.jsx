@@ -11,17 +11,47 @@ import {BASE_URL} from './../utils/config';
 const Register = () => {
 
   const [credentials, setCredentials] = useState({
-    username:undefined, 
-    email:undefined,
-     password:undefined
+    username:"", 
+    email:"",
+     password:""
   });
 
   const {dispatch} = useContext(AuthContext)
   const navigate=useNavigate()
 
+  const [errors, setErrors] = useState({});
 
-  const handleChange = e => {
+  const handleChange = (e )=> {
+    const { name, value } = e.target;
+
       setCredentials(prev => ({...prev, [e.target.id]:e.target.value}))
+
+      switch (name) {
+        case "username":
+          const nameRegex=/^[a-zA-Z ]{2,40}$/;
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            name: !nameRegex.test(value) ? "invalid name(enter only character(length>2))" : "",
+          }));
+          break;
+        case "email":
+          // Simple email validation regex
+          const emailRegex = /^\S+@\S+\.\S+$/;
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            email: !emailRegex.test(value) ? "Invalid email address" : "",
+          }));
+          break;
+        case "password":
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            password:
+              value.length < 3 ? "length must be greater than 4 " : "",
+          }));
+          break;
+        default:
+          break;
+      }
   };
 
   const handleClick= async e=>{
@@ -47,6 +77,9 @@ const Register = () => {
 
 
 
+   
+
+
   return (
     <section>
       <Container>
@@ -70,8 +103,11 @@ const Register = () => {
                       placeholder="email"
                       required
                       id="email"
+                      name="email"
+                      value={credentials.email}
                       onChange={handleChange}
                     />
+                    {errors.email && <span className="error">{errors.email}</span>}
                   </FormGroup>
                   <FormGroup>
                     <input
@@ -79,8 +115,11 @@ const Register = () => {
                       placeholder="Username"
                       required
                       id="username"
+                      name="username"
+                      value={credentials.username}
                       onChange={handleChange}
                     />
+                    {errors.name && <span className="error">{errors.name}</span>}
                   </FormGroup>
                   <FormGroup>
                     <input
@@ -89,7 +128,10 @@ const Register = () => {
                       onChange={handleChange}
                       placeholder="password"
                       required
+                      name="password"
+                      value={credentials.password}
                     />
+                    {errors.password && <span className="error">{errors.password}</span>}
                   </FormGroup>
                   
                     <Button

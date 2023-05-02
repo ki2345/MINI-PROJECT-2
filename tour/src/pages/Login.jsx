@@ -16,11 +16,34 @@ const Login = () => {
      password:undefined
   });
 
+  const [errors, setErrors] = useState({});
+
   const {dispatch} = useContext(AuthContext)
   const navigate=useNavigate()
 
   const handleChange = e => {
+    const { name, value } = e.target;
       setCredentials(prev => ({...prev, [e.target.id]:e.target.value}))
+
+      switch (name) {
+        case "email":
+          // Simple email validation regex
+          const emailRegex = /^\S+@\S+\.\S+$/;
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            email: !emailRegex.test(value) ? "Invalid email address" : "",
+          }));
+          break;
+        case "password":
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            password:
+              value.length < 3 ? "length must be greater than 2 " : "",
+          }));
+          break;
+        default:
+          break;
+      }
   };
 
   const handleClick=  async e=>{
@@ -70,12 +93,14 @@ const Login = () => {
                 <Form onSubmit={handleClick}>
                   <FormGroup>
                     <input
-                      type="text"
+                      type="email"
                       placeholder="Email"
                       required
                       id="email"
+                      name="email"
                       onChange={handleChange}
                     />
+                    {errors.email && <span className="error">{errors.email}</span>}
                   </FormGroup>
                   <FormGroup>
                     <input
@@ -83,8 +108,10 @@ const Login = () => {
                       id="password"
                       onChange={handleChange}
                       placeholder="password"
+                      name="password"
                       required
                     />
+                    {errors.password && <span className="error">{errors.password}</span>}
                   </FormGroup>
                     <Button
                       className="btn secondary__btn auth__btn"
