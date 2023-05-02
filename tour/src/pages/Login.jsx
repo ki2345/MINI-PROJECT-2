@@ -86,7 +86,6 @@ const Login = () => {
                       required
                     />
                   </FormGroup>
-                  
                     <Button
                       className="btn secondary__btn auth__btn"
                       type="submit"

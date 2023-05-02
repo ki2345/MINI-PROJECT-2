@@ -126,7 +126,7 @@ const  {data:tour,loading,error} = useFetch(`${BASE_URL}/tours/${id}`);
                       {city}
                     </span>
                     <span>
-                      <i class="ri-money-dollar-circle-line"></i>${price} /per person
+                      <i class="ri-money-dollar-circle-line"></i>&#8377;{price} /per person
                     </span>
                     <span>
                     <i class="ri-map-pin-time-line"></i>{distance} k/m
