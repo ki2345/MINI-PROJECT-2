@@ -78,7 +78,7 @@ const Booking = ({ tour, avgRating }) => {
                   required onChange={handleChange}/>
                </FormGroup>
                <FormGroup className="d-flex align-items-center gap-3">
-                  <input type="date" placeholder="" id="bookAt"
+                  <input type="date" placeholder="dd-mm-yyyy" id="bookAt"
                   required onChange={handleChange}/>
                   <input type="number" placeholder="Guest" id="guestSize"
                   required onChange={handleChange}/>

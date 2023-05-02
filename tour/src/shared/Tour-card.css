@@ -35,7 +35,7 @@
 }
 
 .tour__location{
-    color: var(--heading-color);
+    color: rgb(77, 73, 73);
     font-weight: 500;
     font-size: 0.9rem;
 }
@@ -53,7 +53,7 @@ font-size: 1rem;
 
 .tour__title a{
     text-decoration: none;
-    color: var(--heading-color);
+    color: rgb(77, 73, 73);
      transition: 0.3s;
 }
 
