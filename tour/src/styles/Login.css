@@ -56,7 +56,8 @@ input::placeholder{
     outline:none;
 }
 .auth__btn{
-    background: var(--heading-color) !important;
+    /* background: var(--heading-color) !important; */
+    background-color:black !important ;
     width: 100%;
     color: #fff !important;
 }
