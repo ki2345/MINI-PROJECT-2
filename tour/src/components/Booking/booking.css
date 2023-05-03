@@ -80,7 +80,12 @@
 }
 
 .total h5, .total span{
-    color: var(--heading-color) !important;
+    /* color: var(--heading-color) !important; */
+    color: var(--text-color) !important;
     font-weight: 700 !important;
     font-size: 1.1rem !important;
+}
+
+input[type=date]:invalid::-webkit-datetime-edit{
+    color: red;
 }

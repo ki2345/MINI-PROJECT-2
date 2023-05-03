@@ -113,7 +113,6 @@ const Login = () => {
                     />
                     {errors.password && <span className="error">{errors.password}</span>}
                   </FormGroup>
-                  
                     <Button
                       className="btn secondary__btn auth__btn"
                       type="submit"
