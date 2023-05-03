@@ -20,8 +20,49 @@ const Booking = ({ tour, avgRating }) => {
     bookAt: ''
   })
 
+  const [errors, setErrors] = useState({});
+
+
   const handleChange = e => {
       setBooking(prev => ({...prev, [e.target.id]:e.target.value}))
+      const { name, value } = e.target;
+
+      switch (name) {
+        case "fullName":
+          // Simple email validation regex
+          const nameRegex=/^[a-zA-Z ]{2,40}$/;
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            fullName: !nameRegex.test(value) ? "invalid name(enter only character(length>2))" : "",
+          }));
+          break;
+        case "number":
+          const numberRegex=/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            number: !numberRegex.test(value)? "enter a valid number" : "",
+          }));
+          break;
+
+          case "Guest":
+           
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            Guest: value < 1 ? "enter a valid number" : "",
+          }));
+          break;
+
+          case "date":
+         const date=new Date();
+         
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            date: new Date(value) < date  ? "Invalid date" : "",
+          }));
+          break;
+        default:
+          break;
+      }
   };
 
   const serviceFee = 10;
@@ -70,19 +111,27 @@ const Booking = ({ tour, avgRating }) => {
             <h5>Information</h5>
             <Form className="booking__info-form" onSubmit={handleClick}>
                <FormGroup>
-                  <input type="text" placeholder="Full Name" id="fullName"
+                  <input type="text" placeholder="Full Name" id="fullName" name="fullName"
                   required onChange={handleChange}/>
+                  {errors.fullName && <span className="error">{errors.fullName}</span>}
+
                </FormGroup>
                <FormGroup>
-                  <input type="number" placeholder="Phone" id="phone"
+                  <input type="number" placeholder="Phone" id="phone" name="number"
                   required onChange={handleChange}/>
+                    {errors.number && <span className="error">{errors.number}</span>}
+
                </FormGroup>
                <FormGroup className="d-flex align-items-center gap-3">
-                  <input type="date" placeholder="" id="bookAt"
+                  <input type="date" placeholder="" id="bookAt" name="date"
                   required onChange={handleChange}/>
-                  <input type="number" placeholder="Guest" id="guestSize"
+                  <input type="number" placeholder="Guest" id="guestSize" name="Guest"
                   required onChange={handleChange}/>
                </FormGroup>
+               {errors.date && <span className="error">{errors.date}</span>}
+
+               {errors.Guest && <span className="error">{errors.Guest}</span>}
+
             </Form>
           </div>
 
