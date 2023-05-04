@@ -1,3 +1,8 @@
+
+// if (process.env.NODE_ENV != "production") {
+//   require("dotenv").config({ path: "./config.env" })
+// } 
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
