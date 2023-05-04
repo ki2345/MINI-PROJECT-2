@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV != "production") {
+    require("dotenv").config({ path: "./config.env" })
+} 
+
 import express from 'express'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
