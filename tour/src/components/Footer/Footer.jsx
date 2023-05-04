@@ -18,10 +18,6 @@ const quick__links =[
 
 const quick__links2 =[
   {
-    path:'/gallery',
-    display:'Gallery'
-  },
-  {
     path:'/tours',
     display:'Tours'
   }
